@@ -1,0 +1,23 @@
+format = 4
+id = "github.com/ch1-k-mc/Jade-Bedrock"
+version = "0.1.0"
+
+[info]
+name = "Jade (unofficial Bedrock port)"
+description = "An unofficial Bedrock Edition (LeviLamina) port of the Java Edition mod Jade: shows information about the block, entity or fluid you are looking at in a tooltip."
+tags = ["platform:levilamina", "type:mod", "client", "utility", "information"]
+logo = "https://raw.githubusercontent.com/ch1-k-mc/Jade-Bedrock/main/docs/images/icon.png"
+
+# Client only. LeviLamina 26.60 has no "client" variant: the entry is picked by side.
+[[variants.""]]
+side = "client"
+platform = "win-x64"
+preserve = ["mods/Jade/config/**"]
+
+[variants."".deps]
+"github.com/LiteLDev/LeviLamina" = "26.60.*"
+
+[[variants."".assets]]
+type = "zip"
+urls = ["https://{{id}}/releases/download/v{{version}}/Jade-client-windows-x64.zip"]
+place = [{ src = "Jade/", dest = "mods/Jade/" }]

@@ -1,0 +1,56 @@
+{
+  "format_version": 3,
+  "format_uuid": "289f771f-2c9a-4d73-9f3f-8492495a924d",
+  "tooth": "github.com/ch1-k-mc/Jade-Bedrock",
+  "version": "0.1.0",
+  "info": {
+    "name": "Jade (unofficial Bedrock port)",
+    "description": "An unofficial Bedrock Edition (LeviLamina) port of the Java Edition mod Jade: shows information about the block, entity or fluid you are looking at in a tooltip.",
+    "tags": [
+      "platform:levilamina",
+      "type:mod",
+      "client",
+      "utility",
+      "information"
+    ],
+    "avatar_url": "https://raw.githubusercontent.com/ch1-k-mc/Jade-Bedrock/main/docs/images/icon.png"
+  },
+  "variants": [
+    {
+      "label": "client",
+      "platform": "win-x64",
+      "dependencies": {
+        "github.com/LiteLDev/LeviLamina#client": "26.60.*"
+      },
+      "assets": [
+        {
+          "type": "zip",
+          "urls": [
+            "https://{{tooth}}/releases/download/v{{version}}/Jade-client-windows-x64.zip"
+          ],
+          "placements": [
+            {
+              "type": "dir",
+              "src": "Jade/",
+              "dest": "mods/Jade/"
+            }
+          ]
+        }
+      ],
+      "preserve_files": [
+        "mods/Jade/config/**"
+      ],
+      "remove_files": [],
+      "scripts": {
+        "pre_install": [],
+        "install": [],
+        "post_install": [],
+        "pre_pack": [],
+        "post_pack": [],
+        "pre_uninstall": [],
+        "uninstall": [],
+        "post_uninstall": []
+      }
+    }
+  ]
+}
